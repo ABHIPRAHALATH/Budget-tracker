@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Budget Tracker</h1>
+        
+        <!-- Remaining Budget Display -->
+        <h2>Remaining Budget: $<span id="remainingBalance">1500</span></h2>
+
+        <h3>Status: <span id="status" class="good-budget">Good</span></h3>
+
+        <!-- Expense Summary Display -->
+        <div class="expense-summary">
+            <h3>Expenses</h3>
+            <ul id="expenseList">
+                <!-- Expenses will be listed here dynamically -->
+            </ul>
+        </div>
+
+        <!-- Add Expense Form -->
+        <div class="expense-forms">
+            <h3>Add Expense</h3>
+            <form id="addExpenseForm">
+                <label for="category">Category:</label>
+                <select id="category" required>
+                    <option value="shopping">Shopping</option>
+                    <option value="food">Food</option>
+                    <option value="academic">Academic</option>
+                    <option value="medical">Medical</option>
+                </select>
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" step="0.01" required>
+                <button type="submit">Add Expense</button>
+            </form>
+
+            <!-- Remove Expense Form -->
+            <h3>Remove Expense</h3>
+            <form id="removeExpenseForm">
+                <label for="removeCategory">Category:</label>
+                <select id="removeCategory" required>
+                    <option value="shopping">Shopping</option>
+                    <option value="food">Food</option>
+                    <option value="academic">Academic</option>
+                    <option value="medical">Medical</option>
+                </select>
+                <label for="removeAmount">Amount:</label>
+                <input type="number" id="removeAmount" step="0.01" required>
+                <button type="submit">Remove Expense</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
